@@ -6,7 +6,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class TitleInvestmentAdmin extends Admin
+class VoluntaryInvestmentAdmin extends Admin
 {
     protected function configureListFields(ListMapper $listMapper)
     {

@@ -103,3 +103,8 @@ services:
             tags:
                 - { name: sonata.admin, manager_type: orm, group: Investments, label: Voluntary }
             arguments: [null, SomEnergia\InversionsBundle\Entity\VoluntaryInvestment, SomEnergiaInversionsBundle:VoluntaryInvestmentAdmin]
+    somenergia.investments.title:
+            class: SomEnergia\InversionsBundle\Admin\TitleInvestmentAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: Investments, label: Titles }
+            arguments: [null, SomEnergia\InversionsBundle\Entity\TitleInvestment, SomEnergiaInversionsBundle:TitleInvestmentAdmin]
