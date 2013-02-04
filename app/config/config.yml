@@ -86,12 +86,20 @@ sonata_admin:
         blocks:
             # display a dashboard block
             - { position: left, type: sonata.admin.block.admin_list }
+        groups:
+            Investments:
+
 
 
 # DIC config
 services:
-    somenergia.admin.page:
+    somenergia.investments:
         class: SomEnergia\InversionsBundle\Admin\InvestmentAdmin
         tags:
             - { name: sonata.admin, manager_type: orm, group: Investments, label: Investment }
         arguments: [null, SomEnergia\InversionsBundle\Entity\Investment, SomEnergiaInversionsBundle:InvestmentAdmin]
+    somenergia.investments.voluntary:
+            class: SomEnergia\InversionsBundle\Admin\VoluntaryInvestmentAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: Investments, label: Voluntary }
+            arguments: [null, SomEnergia\InversionsBundle\Entity\VoluntaryInvestment, SomEnergiaInversionsBundle:VoluntaryInvestmentAdmin]

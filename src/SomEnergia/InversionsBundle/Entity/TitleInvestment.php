@@ -6,10 +6,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="somenergia_investment")
+ * @ORM\Table(name="somenergia_title_investment")
  * @ORM\HasLifecycleCallbacks
  */
-class Investment
+class TitleInvestment
 {
     /**
      * @ORM\Id
