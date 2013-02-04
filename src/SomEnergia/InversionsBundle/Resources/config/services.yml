@@ -1,0 +1,7 @@
+parameters:
+#    som_energia_inversions.example.class: SomEnergia\InversionsBundle\Example
+
+services:
+#    som_energia_inversions.example:
+#        class: %som_energia_inversions.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
