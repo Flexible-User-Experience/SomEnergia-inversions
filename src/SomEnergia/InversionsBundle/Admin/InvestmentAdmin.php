@@ -13,7 +13,24 @@ class InvestmentAdmin extends Admin
         $listMapper
             ->addIdentifier('id')
             ->add('type')
-            ->add('investDate')
+            //->add('investDate')
+            ->add('year')
+            ->add('week')
+            ->add('amount')
+            ->add('total')
+        ;
+    }
+
+    protected function configureFormFields(FormMapper $formMapper)
+    {
+        $formMapper
+            ->add('type', 'sonata_type_translatable_choice', array(
+                'choices' => array(0 => 'aportaciones voluntarias', 1 => 'titulos participativos'),
+                'catalogue' => 'SonataOrderBundle'
+            ))
+            //->add('investDate')
+            ->add('year')
+            ->add('week')
             ->add('amount')
             ->add('total')
         ;
